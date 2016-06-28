@@ -11,10 +11,15 @@
         <li>{{n}}</li>
         {% endfor %}
     </ul>
+    <p>Same list with a filter: {{ my_list|join(', ') }}</p>
+    <h4>Current date/time: {{ current_time | datetimefilter }}</h4>
     <h3> This is the end of my child template</h3>
+
 {% endblock %}
 
 {% block footer %}
 {{super()}}
 ...and this addition to the footer is coming from the child template.
 {% endblock %}
+
+
